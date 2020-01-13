@@ -17,12 +17,15 @@ public class Activity {
 
         userRepository.deleteAll();
 
-        User user1 = new User("Matteo", "D'Alessandro", conn);
-        User user2 = new User("Luisa", "Aquilino", conn);
-        User user3 = new User("Pancrazio", "Franziskainer", conn);
-        User user4 = new User("John", "Belushi", conn);
+        User user1 = new User("Matteo", "D'Alessandro");
+        User user2 = new User("Luisa", "Aquilino");
+        User user3 = new User("Pancrazio", "Franziskainer");
+        User user4 = new User("John", "Belushi");
 
-
+        user1.setID(userRepository.insertUser(user1));
+        user2.setID(userRepository.insertUser(user2));
+        user3.setID(userRepository.insertUser(user3));
+        user4.setID(userRepository.insertUser(user4));
 
 //non dovrei mai creare un utente senza poi aggiungerlo nel database (return ID)...
 //        user1.setID(userRepository.insertUser(user1)); //il metodo insertUser ritorna l'ID dell'utente inserito, AUTO_INCREMENT_VALUE
