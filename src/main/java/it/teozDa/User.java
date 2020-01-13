@@ -16,14 +16,6 @@ public class User {
         lastName = sName;
     }
 
-    public User(String name, String sName, Connector conn) {
-        UserRepository usrRep = new UserRepository(conn);
-        firstName = name;
-        lastName = sName;
-        ID = usrRep.insertUser(this);
-
-    }
-
 
     public void setID(int id) {
         ID = id;
