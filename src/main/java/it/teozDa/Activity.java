@@ -18,7 +18,7 @@ public class Activity {
         userRepository.deleteAll();
 
         User user1 = new User("Matteo", "D'Alessandro");
-        User user2 = new User("Luisa", "Aquilino");
+        User user2 = new User("Beppe", "Arcimboldo");
         User user3 = new User("Pancrazio", "Franziskainer");
         User user4 = new User("John", "Belushi");
 
@@ -38,8 +38,8 @@ public class Activity {
 //        userRepository.deleteUser();
         users = userRepository.getAllUsers();
         System.out.println(users);
-//        userRepository.updateFirstNameUser(2, "Concetta");
-//        userRepository.updateLastNameUser(2, "Aquilino");
+//        userRepository.updateFirstNameUser(2, "Pasquale");
+//        userRepository.updateLastNameUser(2, "Lavreccia");
         userRepository.getUserByID(4);
 
         Expense exp1 = new Expense(1, "15-01-2020", "Gen/Feb2020", (double) 260);
